@@ -45,9 +45,9 @@ def process_csv(input_file, output_file):
         else:
           index = header.index(column[i])
           list_[index] = ld[i][1]
+          i += 1
           if i < len(first_column_values):
             site = first_column_values[i].rsplit("/", 1)[0]
-            i += 1
 
       writer.writerow(list_)
 
